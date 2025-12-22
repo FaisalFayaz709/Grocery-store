@@ -1,0 +1,6 @@
+@SmartGrocery.API_HostAddress = http://localhost:5172
+
+GET {{SmartGrocery.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

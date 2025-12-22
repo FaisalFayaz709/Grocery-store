@@ -1,0 +1,93 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: grocery-postgres
+    environment:
+      POSTGRES_DB: grocerydb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 252570
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - grocery-network
+
+  # .NET API Service
+  dotnet-api:
+    build:
+      context: ./SmartGrocerySolution
+      dockerfile: SmartGrocery.API/Dockerfile
+    container_name: grocery-dotnet-api
+    ports:
+      - "5172:5172"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:5172
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=grocerydb;Username=postgres;Password=252570
+      - PythonService__BaseUrl=http://fastapi-service:8001
+      - JwtSettings__Secret=THIS_IS_A_SUPER_SECRET_KEY_123456789
+      - JwtSettings__Issuer=SmartGroceryAPI
+      - JwtSettings__Audience=SmartGroceryUsers
+      - JwtSettings__ExpiryMinutes=36000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - grocery-network
+    restart: unless-stopped
+
+  # FastAPI Recommendation Service
+  fastapi-service:
+    build:
+      context: ./grocery-recommender
+      dockerfile: Dockerfile
+    container_name: grocery-fastapi
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DOTNET_API_BASE_URL=http://dotnet-api:5172/api
+    depends_on:
+      - postgres
+    networks:
+      - grocery-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Next.js Frontend
+  nextjs-frontend:
+    build:
+      context: ./grocery-store
+      dockerfile: Dockerfile
+    container_name: grocery-nextjs
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:5172
+    depends_on:
+      - dotnet-api
+      - fastapi-service
+    networks:
+      - grocery-network
+    restart: unless-stopped
+
+networks:
+  grocery-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+

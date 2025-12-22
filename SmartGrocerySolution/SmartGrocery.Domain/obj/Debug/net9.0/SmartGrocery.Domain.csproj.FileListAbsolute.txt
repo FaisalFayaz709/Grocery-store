@@ -1,0 +1,11 @@
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/bin/Debug/net9.0/SmartGrocery.Domain.deps.json
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/bin/Debug/net9.0/SmartGrocery.Domain.dll
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/bin/Debug/net9.0/SmartGrocery.Domain.pdb
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.AssemblyInfoInputs.cache
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.AssemblyInfo.cs
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.csproj.CoreCompileInputs.cache
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.dll
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/refint/SmartGrocery.Domain.dll
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/SmartGrocery.Domain.pdb
+/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Domain/obj/Debug/net9.0/ref/SmartGrocery.Domain.dll

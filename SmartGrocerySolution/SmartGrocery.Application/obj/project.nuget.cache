@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nhGI39dtprc=",
+  "success": true,
+  "projectFilePath": "/Users/macbook/Desktop/TERASOLS PROJECTS/GroceryStore/SmartGrocerySolution/SmartGrocery.Application/SmartGrocery.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/macbook/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
