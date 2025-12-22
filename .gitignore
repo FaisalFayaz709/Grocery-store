@@ -1,3 +1,14 @@
+# .NET
+**/bin/
+**/obj/
 
-# Ignore frontend dependencies
-/grocery-store/node_modules
+# Next.js
+node_modules/
+.next/
+
+# Python
+__pycache__/
+venv/
+
+# OS
+.DS_Store
