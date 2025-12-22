@@ -1,0 +1,3 @@
+
+# Ignore frontend dependencies
+/grocery-store/node_modules
