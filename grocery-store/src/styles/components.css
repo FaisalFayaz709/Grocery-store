@@ -1,0 +1,54 @@
+/* Product Card Styling */
+.product-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Filter Panel */
+.filter-panel {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-green);
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-green-dark);
+}
+
+.btn-orange {
+  background: var(--primary-orange);
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  background: var(--primary-orange-dark);
+}
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+}
