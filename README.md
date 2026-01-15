@@ -179,7 +179,7 @@ npm run dev    # 🌐 http://localhost:3000
 cd SmartGrocerySolution
 dotnet restore
 dotnet ef database update --project SmartGrocery.Infrastructure --startup-project SmartGrocery.API \
-  --connection "Host=localhost;Port=5432;Database=grocerydb;Username=postgres;Password=252570"
+  --connection "Host=localhost;Port=5432;Database=grocerydb;Username=postgres;Password=enter your db password"
 dotnet run --project SmartGrocery.API  # 📘 http://localhost:5172/swagger
 
 ```
